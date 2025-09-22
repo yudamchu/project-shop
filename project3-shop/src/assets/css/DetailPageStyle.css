@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.total-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-container {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row; /* ✅ row로 수정 */
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* ✅ 화면 좁을 때 자동 줄바꿈 */
+}
+
+.detail-container img {
+    width: 100%;
+    max-width: 500px; /* ✅ 반응형 */
+    height: auto;
+    border-radius: 12px;
+}
+
+.detail-box {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px; /* ✅ 반응형 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 30px;
+    gap: 20px;
+}
+
+.content {
+    font-weight: lighter;
+}
+
+.order-info {
+    width: 100%;
+    max-width: 500px; /* ✅ 반응형 */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.select-box {
+    width: 100%;
+    max-width: 120px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 8px;
+    border: 1px solid gainsboro;
+}
+
+.quant {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.quant button {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+    background: white;
+    cursor: pointer;
+}
+
+.quant span {
+    min-width: 50px;
+    text-align: center;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 3px 0;
+}
+
+.btn-box {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-box button {
+    width: 100%;
+    height: 45px;
+    border: 1px solid gainsboro;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wish-btn {
+    background-color: white;
+}
+
+.order-btn {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.tap-container {
+    width: 80%;           /* ✅ detail-container와 동일 */
+    margin: 40px auto 0;  /* ✅ detail-container와 동일하게 중앙정렬 */
+    max-width: 1200px; 
+}
+
+.tap-container ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tap-container li {
+    flex: 1;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid gainsboro;
+    cursor: pointer;
+}
+
+.tap-container li:hover {
+    border-bottom: none;
+}
+
+/* 📱 모바일 (≤767px) */
+@media (max-width: 767px) {
+    .detail-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-box, .order-info {
+        max-width: 90%;
+    }
+
+    .tap-container li {
+        font-size: 14px;
+    }
+}
+
+/* 📲 태블릿 (768px ~ 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .detail-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-box, .order-info {
+        max-width: 80%;
+    }
+}

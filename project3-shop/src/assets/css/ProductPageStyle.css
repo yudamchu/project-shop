@@ -1,0 +1,70 @@
+@charset 'utf-8';
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.products-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-img{
+  width: 100%;
+  object-fit: cover;   /* 넘치는 건 잘라내고 꽉 채움 */
+  object-position: center; /* 가운데 기준 */
+}
+.content-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+.products-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.add-btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.btn-box button{
+    width: 100%;
+}
+
+/* 📱 모바일 (≤767px) → 1열 */
+@media (max-width: 767px) {
+    .products-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+/* 📲 태블릿 (768px ~ 1023px) → 2열 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .products-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 💻 데스크탑 (≥1024px) → 3열 (기본값 유지) */

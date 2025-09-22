@@ -1,0 +1,83 @@
+
+/* 기본 설정 (모바일 퍼스트) */
+.join-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.join-form {
+  width: 100%;
+  max-width: 480px; /* 모바일에서 너무 넓어지지 않도록 제한 */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+  border: 1px solid #ecebeb;
+  border-radius: 0.5rem;
+  background-color: #f8f8f8;
+}
+
+.join-form h2 {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(1.4rem, 2.5vw, 2rem); /* 화면 크기에 맞춰 자동 조정 */
+  color: black;
+}
+
+.label-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.label-box input {
+  padding: 0.75rem 1rem;
+  border: 1px solid gainsboro;
+  border-radius: 0.25rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* 버튼 스타일 */
+.loginBtn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.loginBtn:hover {
+  background-color: rgb(132, 112, 97);
+}
+
+.loginBtn:active {
+  background-color: rgb(112, 92, 77); /* 모바일 터치 시 피드백 */
+}
+
+/* 태블릿 이상 (≥768px) */
+@media (min-width: 768px) {
+  .join-form {
+    max-width: 600px;
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+
+  .join-form h2 {
+    font-size: clamp(1.6rem, 2vw, 2.2rem);
+  }
+}
+
+/* 데스크탑 이상 (≥1024px) */
+@media (min-width: 1024px) {
+  .join-form {
+    max-width: 700px;
+    padding: 3rem 3rem;
+  }
+}
